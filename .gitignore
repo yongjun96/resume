@@ -1,0 +1,12 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 편집기
+.idea/
+.vscode/
+*.swp
+
+# 작업 중 생성물
+*.log

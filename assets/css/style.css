@@ -1,0 +1,722 @@
+/* ==========================================================================
+   김용준 이력서 / 경력기술서 정적 사이트 공통 스타일
+   원본 PDF 3종의 레이아웃과 색상을 그대로 재현
+   ========================================================================== */
+
+:root {
+  /* 기본 색상 */
+  --ink: #1a1a1a;
+  --muted: #4a4a4a;
+  --sub: #6b6b6b;
+  --line: #d8d8d8;
+  --page-bg: #ebebeb;
+
+  /* 짧은 버전 경력기술서 섹션 라벨 색 (원본 PDF 추출값) */
+  --c-overview: #0c18a8; /* [개요] */
+  --c-problem: #0b786c; /* [문제] */
+  --c-solve: #841884; /* [해결], [해결 방안] */
+  --c-analysis: #a82448; /* [문제 분석 및 해결] */
+  --c-result: #1860d8; /* [성과] */
+
+  /* 긴 버전 경력기술서 섹션 라벨 색 (원본 PDF 추출값) */
+  --c-why: #5448d8; /* [Why?] */
+  --c-trouble: #c03c54; /* [Trouble shooting] */
+  --c-solution: #a87854; /* [Solution] */
+  --c-res: #306c48; /* [Result] */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--page-bg);
+  color: var(--ink);
+  font-family: "Pretendard", "Pretendard Variable", -apple-system, BlinkMacSystemFont,
+    "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", "Noto Sans KR", sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+/* ---------------------------------------------------------------- 상단 내비 */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #1b1b1f;
+  color: #fff;
+  border-bottom: 1px solid #000;
+}
+
+.site-nav__inner {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.site-nav__brand {
+  font-weight: 700;
+  margin-right: 14px;
+  text-decoration: none;
+  letter-spacing: -0.2px;
+}
+
+.site-nav a.site-nav__link {
+  color: #cfcfd6;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 5px 11px;
+  border-radius: 6px;
+}
+
+.site-nav a.site-nav__link:hover {
+  background: #303038;
+  color: #fff;
+}
+
+.site-nav a.site-nav__link[aria-current="page"] {
+  background: #fff;
+  color: #1b1b1f;
+  font-weight: 600;
+}
+
+.site-nav__spacer {
+  flex: 1 1 auto;
+}
+
+.site-nav__pdf {
+  font-size: 13px;
+  color: #b9b9c2;
+  text-decoration: none;
+  border: 1px solid #45454f;
+  border-radius: 6px;
+  padding: 4px 10px;
+  background: none;
+  font-family: inherit;
+  line-height: 1.6;
+  cursor: pointer;
+}
+
+.site-nav__pdf:hover {
+  border-color: #9a9aa6;
+  color: #fff;
+}
+
+/* PDF 저장(인쇄) 버튼 - 주 동작이므로 강조 */
+.site-nav__pdf--primary {
+  color: #1b1b1f;
+  background: #fff;
+  border-color: #fff;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.site-nav__pdf--primary:hover {
+  color: #1b1b1f;
+  background: #e2e2e8;
+  border-color: #e2e2e8;
+}
+
+.site-nav__pdf--primary svg {
+  width: 13px;
+  height: 13px;
+}
+
+/* ---------------------------------------------------------------- 문서 페이지 */
+.page {
+  max-width: 940px;
+  margin: 28px auto 60px;
+  background: #fff;
+  padding: 46px 58px 70px;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.12);
+}
+
+/* 좌상단 대형 워터마크 제목 (Info / Career) */
+.doc-title {
+  font-family: "Times New Roman", "Nanum Myeongjo", Georgia, serif;
+  font-size: 62px;
+  font-weight: 700;
+  color: #c9c9c9;
+  line-height: 1;
+  margin: 0 0 10px;
+  letter-spacing: -1px;
+}
+
+/* 인적사항 헤더 */
+.doc-header {
+  position: relative;
+  border-bottom: 3px solid #111;
+  padding-bottom: 10px;
+  min-height: 140px;
+}
+
+/* 연락처 줄을 구분선 쪽으로 내리기 위해 이름 아래 여백을 크게 준다 */
+.doc-header__name {
+  font-size: 25px;
+  font-weight: 700;
+  margin: 0 0 60px;
+  letter-spacing: -0.3px;
+}
+
+.doc-header__name .birth {
+  font-weight: 700;
+  margin-left: 8px;
+}
+
+.doc-header__contact {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.doc-header__contact span,
+.doc-header__contact a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  text-decoration: none;
+}
+
+.doc-header__contact a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.doc-header__contact .ico {
+  font-size: 17px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.doc-header__contact .ico svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.doc-header__photo {
+  position: absolute;
+  right: 0;
+  top: -18px;
+  width: 118px;
+  height: 157px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* ---------------------------------------------------------------- 섹션 */
+.section {
+  margin-top: 34px;
+}
+
+.section + .section {
+  border-top: 1px solid var(--line);
+  padding-top: 26px;
+}
+
+.section__title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 14px;
+  letter-spacing: -0.4px;
+}
+
+.section__title .period {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--muted);
+  margin-left: 6px;
+}
+
+.intro p {
+  margin: 0 0 4px;
+}
+
+/* 회사 (경력 요약 / 주요 프로젝트) */
+.company {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.company .period {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--muted);
+  margin-left: 6px;
+}
+
+.indent {
+  margin-left: 46px;
+}
+
+.block {
+  margin-bottom: 26px;
+}
+
+/* 주요 프로젝트: 회사 구분선 위/아래 여백 */
+.indent > .company {
+  margin-bottom: 16px;
+}
+
+.block + .company {
+  margin-top: 34px;
+}
+
+/* 프로젝트 제목 */
+.project__title {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  letter-spacing: -0.3px;
+}
+
+.project__title .period {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--muted);
+  margin-left: 8px;
+}
+
+/* 목록 */
+ul.bullets,
+ol.ordered {
+  margin: 4px 0 0;
+  padding-left: 20px;
+}
+
+ul.bullets li,
+ol.ordered li {
+  margin-bottom: 2px;
+}
+
+ul.bullets ul {
+  margin: 2px 0 4px;
+  padding-left: 20px;
+  list-style: circle;
+}
+
+ul.meta {
+  margin: 2px 0 12px;
+  padding-left: 20px;
+  font-size: 14.5px;
+}
+
+ul.meta li {
+  margin-bottom: 1px;
+}
+
+/* 대괄호 섹션 라벨 */
+.label {
+  font-weight: 700;
+  margin: 20px 0 4px;
+  font-size: 15px;
+}
+
+.label--overview { color: var(--c-overview); }
+.label--problem { color: var(--c-problem); }
+.label--solve { color: var(--c-solve); }
+.label--analysis { color: var(--c-analysis); }
+.label--result { color: var(--c-result); }
+.label--why { color: var(--c-why); }
+.label--trouble { color: var(--c-trouble); }
+.label--solution { color: var(--c-solution); }
+.label--res { color: var(--c-res); }
+.label--plain { color: var(--ink); }
+
+/* 소제목 (굵은 검정) */
+.sub {
+  font-weight: 700;
+  margin: 14px 0 2px;
+  font-size: 15px;
+}
+
+.label + .sub {
+  margin-top: 4px;
+}
+
+.text {
+  margin: 0 0 2px;
+}
+
+/* 코드·식별자 표기 */
+code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.9em;
+  background: #f2f2f4;
+  border-radius: 3px;
+  padding: 1px 4px;
+}
+
+/* 지면에 다 담지 않은 프로젝트를 한 줄로 언급 */
+.etc {
+  margin: 16px 0 0;
+  padding: 10px 14px;
+  background: #f7f7f8;
+  border-left: 3px solid var(--line);
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.etc strong {
+  color: var(--ink);
+}
+
+/* 다이어그램 */
+.figure {
+  margin: 14px 0 18px;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 원본 PDF의 도식 크기 비율을 유지하되 웹 가독성을 위해 약 1.8배 확대 */
+.figure--sm img { max-width: 300px; }
+.figure--md img { max-width: 400px; }
+.figure--lg img { max-width: 470px; }
+.figure--xl img { max-width: 100%; }
+
+/* 기술 스택 표 */
+.stack {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  margin-left: 46px;
+  font-size: 14.5px;
+}
+
+.stack dt {
+  color: var(--muted);
+  padding: 7px 16px 7px 0;
+  text-align: right;
+}
+
+.stack dd {
+  margin: 0;
+  padding: 7px 0 7px 20px;
+  border-left: 1px solid var(--line);
+}
+
+/* 병역 / 학력 */
+.footer-info {
+  display: flex;
+  gap: 70px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.footer-info h3 {
+  display: inline;
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0 10px 0 0;
+}
+
+.footer-info .small {
+  font-size: 13px;
+  color: var(--muted);
+  margin-left: 8px;
+}
+
+/* 문서 하단 */
+.doc-end {
+  margin-top: 44px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  color: var(--sub);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.doc-end a {
+  color: var(--sub);
+}
+
+/* ---------------------------------------------------------------- 랜딩 */
+.landing {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 72px 24px 80px;
+}
+
+.landing__title {
+  font-family: "Times New Roman", Georgia, serif;
+  font-size: 58px;
+  color: #c9c9c9;
+  font-weight: 700;
+  margin: 0 0 6px;
+  line-height: 1;
+}
+
+.landing__name {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+
+.landing__lead {
+  color: var(--muted);
+  margin: 0 0 12px;
+  max-width: 720px;
+}
+
+.landing__links {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  font-size: 15px;
+  padding-bottom: 26px;
+  border-bottom: 3px solid #111;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 34px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #dedede;
+  border-radius: 10px;
+  padding: 26px 24px 22px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card__kicker {
+  font-family: "Times New Roman", Georgia, serif;
+  font-size: 13px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: #a8a8a8;
+  margin-bottom: 8px;
+}
+
+.card__title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.card__desc {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0 0 16px;
+  flex: 1 1 auto;
+}
+
+.card__meta {
+  font-size: 13px;
+  color: var(--sub);
+}
+
+.landing__foot {
+  margin-top: 40px;
+  font-size: 13px;
+  color: var(--sub);
+}
+
+/* ---------------------------------------------------------------- 반응형 */
+@media (max-width: 780px) {
+  .page {
+    margin: 0;
+    padding: 28px 20px 48px;
+  }
+
+  .doc-title { font-size: 44px; }
+  .doc-header__photo {
+    position: static;
+    display: block;
+    width: 92px;
+    height: 122px;
+    margin-bottom: 12px;
+  }
+  .doc-header { min-height: 0; }
+  .doc-header__contact { font-size: 15px; gap: 14px; }
+  .indent { margin-left: 0; }
+  .stack { grid-template-columns: 1fr; margin-left: 0; }
+  .stack dt { text-align: left; padding-bottom: 0; }
+  .stack dd { border-left: 0; padding-left: 0; padding-top: 0; margin-bottom: 10px; }
+  .footer-info { gap: 24px; }
+  .landing { padding: 40px 20px 60px; }
+  .landing__title { font-size: 42px; }
+}
+
+/* ---------------------------------------------------------------- 인쇄 / PDF 저장 */
+@page {
+  size: A4;
+  margin: 12mm 12mm;
+}
+
+@media print {
+  body {
+    background: #fff;
+    font-size: 12.5px;
+    line-height: 1.55;
+    /* 섹션 라벨 색상이 인쇄본에서도 유지되도록 */
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .site-nav,
+  .doc-end,
+  .print-hide {
+    display: none !important;
+  }
+
+  .page {
+    margin: 0;
+    max-width: none;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .doc-title { font-size: 52px; }
+  .indent { margin-left: 30px; }
+
+  /* A4 폭은 780px 미만이라 모바일 규칙이 잡히므로 데스크톱 레이아웃으로 되돌린다 */
+  .doc-header { min-height: 140px; }
+
+  .doc-header__photo {
+    position: absolute;
+    right: 0;
+    top: -12px;
+    width: 106px;
+    height: 141px;
+    margin-bottom: 0;
+  }
+
+  .doc-header__contact {
+    font-size: 15.5px;
+    gap: 16px;
+  }
+
+  .footer-info { gap: 50px; }
+
+  .stack {
+    grid-template-columns: 160px 1fr;
+    margin-left: 30px;
+  }
+
+  .stack dt {
+    text-align: right;
+    padding: 6px 14px 6px 0;
+  }
+
+  .stack dd {
+    border-left: 1px solid var(--line);
+    padding: 6px 0 6px 18px;
+    margin-bottom: 0;
+  }
+
+  /* --------------------------------------------------------------
+     페이지 나눔 규칙
+
+     원칙: 쪼개면 의미가 깨지는 것(도식·메타 3줄·표 행)만 통째로 유지하고,
+     긴 목록은 항목 단위로 자연스럽게 넘긴다.
+     목록 전체에 break-inside:avoid 를 걸면 열 몇 줄짜리 목록이 통째로
+     밀리면서 앞 페이지 하단이 통으로 비어버린다.
+     -------------------------------------------------------------- */
+
+  /* 통째로 유지 — 쪼개지면 읽을 수 없는 것들.
+     .stack 은 grid 라 dt/dd 만 보호하면 짝이 갈라져 마지막 행이 홀로 넘어간다.
+     5행짜리 작은 표이므로 전체를 묶는다. */
+  .figure,
+  ul.meta,
+  .etc,
+  .footer-info,
+  .stack {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* 본문 목록은 페이지를 넘나들되, 항목 하나가 잘리지는 않게 */
+  ul.bullets,
+  ol.ordered {
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
+  ul.bullets li,
+  ol.ordered li {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* 문단·항목의 첫/끝 줄이 홀로 떨어지지 않게 */
+  p,
+  li {
+    orphans: 2;
+    widows: 2;
+  }
+
+  /* 제목만 페이지 끝에 남는 것을 방지 */
+  .section__title,
+  .project__title,
+  .company,
+  .label,
+  .sub {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  /* 여백 — 화면 기준 값을 그대로 쓰면 인쇄에서 공백이 과해지고
+     마지막 한두 줄이 새 페이지로 밀려난다 */
+  .block + .company { margin-top: 20px; }
+  .block { margin-bottom: 16px; }
+  .section { margin-top: 22px; }
+  .section + .section { padding-top: 16px; }
+  .section__title { margin-bottom: 10px; }
+  ul.meta { margin-bottom: 9px; }
+  .label { margin: 14px 0 3px; }
+  .sub { margin: 10px 0 2px; }
+  .stack dt { padding: 5px 14px 5px 0; }
+  .stack dd { padding: 5px 0 5px 18px; }
+
+  /* 도식은 잘리면 안 되므로 통째로 유지되는데, 크면 그만큼 앞 페이지가 비게 된다.
+     인쇄에서는 판독에 필요한 최소 크기까지만 줄여 밀려나는 빈도를 낮춘다 */
+  .figure { margin: 10px 0 14px; }
+  .figure--sm img { max-width: 240px; }
+  .figure--md img { max-width: 320px; }
+  .figure--lg img { max-width: 340px; }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>김용준 경력기술서(짧은 버전)</title>
+<meta name="description" content="백엔드 개발자 김용준 경력기술서 요약본 - 보험 정보 아카이브 플랫폼, 봄봄 백엔드 개선, AI 개발 플랫폼 플러그인, 발급매니저 앱, 데이터 수집 파이프라인">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="site-nav__inner">
+    <a class="site-nav__brand" href="index.html">김용준</a>
+    <a class="site-nav__link" href="resume.html">이력서</a>
+    <a class="site-nav__link" href="career-short.html" aria-current="page">경력기술서(짧은 버전)</a>
+    <a class="site-nav__link" href="career-long.html">경력기술서(긴 버전)</a>
+    <span class="site-nav__spacer"></span>
+    <button class="site-nav__pdf site-nav__pdf--primary" type="button" onclick="window.print()" title="인쇄 창에서 대상을 'PDF로 저장'으로 선택하세요"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11 3h2v8.17l3.09-3.08 1.41 1.41L12 15 6.5 9.5l1.41-1.41L11 11.17V3ZM5 18h14v2H5v-2Z"/></svg>PDF로 저장</button>
+    <a class="site-nav__pdf" href="assets/pdf/career-short.pdf" target="_blank" rel="noopener">PDF 원본(2026.08 이전)</a>
+  </div>
+</nav>
+
+<main class="page">
+
+  <h1 class="doc-title">Career</h1>
+
+  <header class="doc-header">
+    <img class="doc-header__photo" src="assets/img/profile.png" alt="김용준 프로필 사진">
+    <p class="doc-header__name">김용준 <span class="birth">1996. 04. 26</span></p>
+    <div class="doc-header__contact">
+      <span><span class="ico">📧</span>practice960426@gmail.com</span>
+      <span><span class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.03-.24c1.12.37 2.33.57 3.56.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.29 21 3 13.71 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.24.2 2.44.57 3.56a1 1 0 0 1-.25 1.03l-2.2 2.2Z"/></svg></span>010-4396-9188</span>
+      <a href="https://github.com/yongjun96" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg></span>GitHub</a>
+      <a href="https://yongjun96.github.io/" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 3h11l5 5v13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Zm10 1.5V9h4.5L14 4.5ZM7 12h10v1.5H7V12Zm0 3.5h10V17H7v-1.5Z"/></svg></span>Blog</a>
+    </div>
+  </header>
+
+  <section class="section intro">
+    <p>Java &amp; Kotlin / Spring 기반 5년차 백엔드 개발자입니다.</p>
+    <p>연간 70만 건의 보험금 대신 청구를 처리하는 인슈어테크 플랫폼을 개발 및 운영했고, 모놀리식 서비스에 Strangler 패턴과 Kafka 기반 이벤트 드리븐 아키텍처를 도입했습니다.</p>
+    <p>현재는 Spring Boot 4 / Java 21 기반 백엔드를 초기 아키텍처부터 단독 설계하며, API 계약(OpenAPI)과 CI 게이트로 코드와 문서의 불일치를 머지 전에 차단하는 방식을 지향합니다.</p>
+  </section>
+
+  <!-- ============================================================ 핀게이트 -->
+  <section class="section">
+    <h2 class="section__title">핀게이트 | 플랫폼개발팀 <span class="period">2026. 04 – 재직중</span></h2>
+
+    <div class="indent">
+
+      <!-- 보험 정보 아카이브 플랫폼 -->
+      <div class="block">
+        <h3 class="project__title">보험 정보 아카이브 플랫폼 백엔드 구축 <span class="period">2026. 07 – 진행중</span></h3>
+        <ul class="meta">
+          <li>참여인원 : BackEnd 1명(본인) / FrontEnd 1명 / 기획 2명 / 총 4명</li>
+          <li>담당업무 : 백엔드 아키텍처 설계 및 구현 전담, OpenAPI 계약 파이프라인 구축, DB 설계, CI/CD 구축</li>
+          <li>사용기술 : Java 21, Spring Boot 4.1, Spring Cloud Gateway(WebFlux), MyBatis, PostgreSQL, Redis, AWS Parameter Store, Docker, GitLab CI</li>
+        </ul>
+
+        <p class="label label--overview">[개요]</p>
+        <p class="text">보험 정보(공지, 뉴스, 판례, Q&amp;A, 통계, 보험사 디렉토리)를 웹/앱으로 제공하고 관리자 백오피스로 운영하는 서비스입니다.</p>
+        <p class="text">백엔드 전체를 빈 저장소에서 시작해 설계, 구현, 배포까지 단독으로 담당했습니다.</p>
+        <p class="text">공개 API 7개 도메인 48 오퍼레이션과 관리자 백오피스, DB 16개 테이블을 구축했고, FE와 BE의 계약 불일치를 CI에서 잡아내는 OpenAPI 계약 파이프라인을 만들었습니다.</p>
+
+        <p class="label label--problem">[문제]</p>
+        <ul class="bullets">
+          <li>기획 문서, 백엔드 코드, 프론트 타입이 각자 관리되어 서로 어긋남 (FE는 API 타입을 수기 작성)</li>
+          <li>경로 기반 인가 구조에서 신규 엔드포인트의 인가 설정 누락 시 조용히 개방되는(fail-open) 위험 존재</li>
+          <li>관리자 인증, 시크릿 관리, 배포가 프로젝트 초기 상태로 정리되지 않은 상황</li>
+        </ul>
+
+        <p class="label label--solve">[해결 방안]</p>
+        <ul class="bullets">
+          <li>Gateway(WebFlux) + Application(MVC) + Admin + Common 4모듈 Gradle 골격을 초기 커밋부터 설계</li>
+          <li>OpenAPI 스펙을 컨트롤러 코드에서 생성하고, CI 드리프트 게이트로 코드↔문서 불일치를 머지 단계에서 차단</li>
+          <li>인가 모델을 경로 기반에서 리소스 기반(<code>@PreAuthorize</code>)으로 재설계하고 누락을 ArchUnit 규칙으로 빌드에서 강제</li>
+          <li>관리자 인증을 JWT에서 쿠키 세션(Redis, 로그인 실패 잠금 포함)으로 재설계</li>
+          <li>API 버저닝 및 폐기 절차를 팀 규약으로 확정하고 게이트웨이에 설정으로 집행</li>
+        </ul>
+
+        <p class="label label--analysis">[문제 분석 및 해결]</p>
+
+        <p class="sub">FE/BE 계약 드리프트 문제</p>
+        <ul class="bullets">
+          <li>모듈별 스펙을 단일 문서로 조립하는 CLI를 직접 제작, 스키마 이름 충돌 검출, 라우팅 프리픽스를 게이트웨이 설정에서 읽어 문서가 옛 주소를 가리키지 않도록 설계</li>
+          <li>CI 게이트가 코드만 고치고 스펙을 두고 온 커밋의 머지를 차단하고, 프론트는 <code>openapi-typescript</code>로 생성한 타입만 소비</li>
+          <li>백엔드와 기획 문서의 경로 좌표계가 달라 각자 자기 문서와는 일치하지만 실제로는 어긋나는 상태였음. 리팩토링에 영향을 받지 않는 <code>operationId</code>를 앵커로 양쪽 계약을 CI에서 전수 대조</li>
+        </ul>
+
+        <p class="sub">인가 설정 누락(fail-open) 문제</p>
+        <ul class="bullets">
+          <li>관리자 컨트롤러의 <code>@PreAuthorize</code> 부착을 ArchUnit 규칙으로 강제하여 어노테이션 누락이 테스트 단계에서 실패하도록 구성</li>
+          <li>게이트웨이에서 클라이언트가 보낸 신원 헤더(<code>X-User-*</code>)를 항상 제거 후 재부여하여 신원 스푸핑 차단</li>
+          <li>인가 스모크 테스트(개방, 401, 역할별 200/403)로 회귀 방지</li>
+        </ul>
+
+        <p class="sub">API 버저닝 규약 설계</p>
+        <ul class="bullets">
+          <li>URL 메이저 버전 단일 축(<code>/api/v1/</code>) 채택, 파괴적 변경이 발생한 엔드포인트 단위로만 승격</li>
+          <li>스토어 배포 앱은 즉시 갱신되지 않는다는 전제에서 폐기 절차(<code>Deprecation</code>/<code>Sunset</code> 헤더 + 최소 3개월 유예)를 설계하고, 유예 시작 및 종료가 재배포 없이 설정으로 제어되도록 구현</li>
+        </ul>
+
+        <p class="label label--result">[성과]</p>
+        <ul class="bullets">
+          <li>API 계약이 <strong>39경로, 48 오퍼레이션</strong> 규모로 커진 뒤에도 코드-문서 불일치가 머지 전에 차단되는 구조 확보</li>
+          <li>프론트엔드가 별도 협의 없이 생성 타입만으로 API를 소비, 계약 관련 커뮤니케이션 비용 제거</li>
+          <li>GitLab CI 5스테이지 20+ 잡 운영, Testcontainers 기반 DB 매퍼 테스트를 CI 차단 게이트로 승격</li>
+          <li>시크릿을 AWS Parameter Store로 이관하고 미주입 시 기동 실패(fail-fast)로 전환하여 커밋된 기본값 제거</li>
+          <li>아키텍처, 버저닝, 레이트리밋 등 주요 판단을 결정 기록(ADR)으로 문서화 (5건 작성)</li>
+        </ul>
+      </div>
+
+      <!-- 봄봄 -->
+      <div class="block">
+        <h3 class="project__title">보험설계 플랫폼(봄봄) 백엔드 개선 및 인프라 통합 <span class="period">2026. 04 – 2026. 07</span></h3>
+        <ul class="meta">
+          <li>참여인원 : BackEnd 1명(본인)</li>
+          <li>담당업무 : 백엔드 기능 개발 및 성능 개선, 장애 대응, 모노레포/CI 통합, DB 마이그레이션</li>
+          <li>사용기술 : Java 17, Spring Boot 3.x, Spring Cloud Gateway, MyBatis, PostgreSQL, Redis, RabbitMQ, Vue 3, Docker, GitLab CI</li>
+        </ul>
+
+        <p class="label label--overview">[개요]</p>
+        <p class="text">보험 설계사가 고객 보유 계약을 수집 및 분석하고 상품을 비교 및 설계하는 B2B2C 플랫폼입니다.</p>
+        <p class="text">개인정보를 다루는 금융 도메인으로, 5개 백엔드 모듈과 프론트엔드의 유지보수 및 개선과 분산된 저장소 및 CI의 통합을 담당했습니다.</p>
+
+        <p class="label label--analysis">[문제 분석 및 해결]</p>
+
+        <p class="sub">설계 저장 시 상품이 무음으로 유실되는 장애</p>
+        <ul class="bullets">
+          <li>저장 루프의 불완전 행 가드가 <code>continue</code>가 아닌 <code>break</code>로 작성되어 불완전한 행 하나 뒤의 모든 상품이 저장되지 않았고, 전체 삭제 선행 + <code>@Transactional</code> 부재가 겹쳐 부분 실패가 영구 데이터 손실로 확정되는 구조였음</li>
+          <li><code>@Transactional(rollbackFor = Exception.class)</code>로 삭제+재삽입을 원자화하고, 이중 가드를 단일 <code>continue</code> 가드로 통합</li>
+          <li>스킵 행은 식별자 수준만 로깅하여 개인정보 평문 미노출 정책 준수</li>
+        </ul>
+
+        <p class="sub">보험사 비교 보험료 계산의 N+1 문제</p>
+        <ul class="bullets">
+          <li>담보 × 특약 단위 병렬 계산에서 동일 메타데이터를 매 호출마다 재조회하던 구조를 요청-로컬 메타 캐시로 요청당 1회 조회로 축소</li>
+          <li><code>computeIfAbsent</code>(블로킹 JDBC를 락 보유 채 실행) vs <code>get + putIfAbsent</code>(소량 중복 로드 허용) 트레이드오프를 비교하고, 요청-로컬 및 단명 캐시에서는 후자가 우수하다는 근거로 채택</li>
+          <li>캐시 키를 문자열 결합에서 <code>record</code> 값 객체로 교체하여 구분자 충돌 원천 제거</li>
+        </ul>
+
+        <p class="sub">레거시 축약어 명명 전사 마이그레이션</p>
+        <ul class="bullets">
+          <li>DB 컬럼, DTO, URL, Redis 키 및 프론트까지 전 계층에 관통한 축약어(<code>clphn_no</code>, <code>cnsl</code> 등)를 풀네임으로 무중단 전환, 단일 차수 기준 223개 파일 변경</li>
+          <li>코드만 바꾸면 무음 장애가 발생하는 외부 계약 4종(프론트 payload 키, 운영 DB 데이터 값, API URL, 파일 경로)을 식별하여 동반 마이그레이션 또는 의도적 미변경으로 각각 결정</li>
+          <li>개인정보 어노테이션 무손실을 정량 대조(변경 전후 개수 일치)로 검증하며 전환</li>
+        </ul>
+
+        <p class="sub">분산된 저장소 및 CI 통합</p>
+        <ul class="bullets">
+          <li>7개 저장소로 흩어진 백엔드, 프론트, 문서 자산을 단일 모노레포로 통합하고, 모듈별 개별 CI 5식을 루트 단일 파이프라인으로 일원화 (경로 룰 기반 선택 빌드, 러너 6종 → 2종)</li>
+          <li>브랜치 푸시만으로 MR 자동 생성 → AI 코드/보안 리뷰 코멘트 게시까지 자동화하여 소수 인원 팀의 리뷰 병목 해소</li>
+        </ul>
+
+        <p class="label label--result">[성과]</p>
+        <ul class="bullets">
+          <li>간헐적으로만 보고되던 데이터 유실 장애의 근본 원인 규명 및 수정, 재발 패턴 문서화</li>
+          <li>보험료 계산 중복 DB 조회 제거로 비교 화면 부하 감소</li>
+          <li>마이그레이션 전 차수에서 5개 모듈 빌드 성공 및 개인정보 어노테이션 손실 0 유지</li>
+          <li>리뷰 미수행 머지 사실상 소멸, AI 리뷰가 병합 전 CRITICAL 결함(공유 캐시 가변 노출)을 실제로 차단</li>
+        </ul>
+      </div>
+
+      <!-- 사내 AI 개발 플랫폼 플러그인 -->
+      <div class="block">
+        <h3 class="project__title">사내 AI 개발 플랫폼 플러그인 개발 <span class="period">2026. 06 – 진행중</span></h3>
+        <ul class="meta">
+          <li>참여인원 : 4명 (전사 공유 플러그인 마켓플레이스)</li>
+          <li>담당업무 : 백엔드/프론트 스캐폴드 플러그인 신설 및 오너십, 문서 검증 엔진 개발</li>
+          <li>사용기술 : Claude Code Plugin(Skill/Hook), Node.js 22, GitLab CI</li>
+        </ul>
+
+        <p class="label label--overview">[개요]</p>
+        <p class="text">전사 개발 조직이 공유하는 AI 협업 도구 마켓플레이스에 플러그인을 개발했습니다.</p>
+        <p class="text">프로젝트마다 손으로 반복하던 초기 세팅과 문서-코드 정합 검증을 도구로 규격화했습니다.</p>
+
+        <p class="label label--solution">[주요 작업]</p>
+        <ul class="bullets">
+          <li><strong>백엔드 스캐폴드 플러그인 신설</strong> : Java 21, Spring Boot 4.1/3.5 두 기준선을 버전 SSOT(단일 표)로 관리하고, Boot 3 → 4 이행 차이(웹 스타터 개편, Jackson 3, 패키지 이동)를 템플릿 토큰으로 흡수. 신규 백엔드 프로젝트 초기 세팅을 대화형 질문 9개로 단축</li>
+          <li><strong>스캐폴드 템플릿의 신원 스푸핑 취약점 발견 및 차단</strong> : 게이트웨이 인증 필터가 클라이언트 발신 <code>X-User-Id</code> 헤더를 제거하지 않아 헤더 위조만으로 임의 사용자 인증 우회가 가능한 구조를 신뢰 경계 분석으로 발견. 헤더 강제 제거와 경로 매칭 세그먼트 경계화(<code>/auth</code> 규칙이 <code>/authx/**</code>를 통과시키던 결함 포함)로 수정, 템플릿 결함이라 파생 프로젝트 전체로 복제될 취약점을 확산 전에 차단</li>
+          <li><strong>기획 정본 ↔ 개발 문서 정합 검증 엔진 개발</strong> : 검사 10종과 회귀 테스트 97건. 수행하지 않은 검사와 통과한 검사를 구분해 보고하도록 하고, 보고만 하던 drift 검사에 <code>--strict</code>를 도입해 CI 차단 게이트로 승격</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ 마이크로프로텍트 -->
+  <section class="section">
+    <h2 class="section__title">마이크로프로텍트 | IT본부 <span class="period">2024. 08 – 2025. 10</span></h2>
+
+    <div class="indent">
+
+      <!-- 발급매니저 앱 서비스 -->
+      <div class="block">
+        <h3 class="project__title">발급매니저 앱 서비스 <span class="period">2025. 06 – 2025. 10</span></h3>
+        <ul class="meta">
+          <li>참여인원 : BackEnd 3명 / FrontEnd 3명 / 기획 1명 / 디자인 1명 / 총 8명</li>
+          <li>담당업무 : 아키텍처 전환 과정에서 이벤트 구조 설계, Outbox 모델링, Polling 처리 로직 구현 및 API 개발</li>
+          <li>사용기술 : Kotlin, Exposed, Spring Boot, PostgreSQL, Kafka, AWS(S3, ECS, MSK)</li>
+        </ul>
+
+        <p class="label label--overview">[개요]</p>
+        <p class="text">대리인이 위임장을 통해 병원 서류를 대신 발급받고 서류를 앱으로 업로드하여 보험 청구를 진행할 수 있는 기능을 설계 및 구현했습니다.</p>
+        <p class="text">기존 모놀리식 구조에서 기능 장애가 전체 서비스로 확산되는 문제를 해결하기 위해 Strangler 패턴을 적용하여 청구 도메인을 점진적으로 분리했습니다.</p>
+        <p class="text">Kafka 기반 이벤트 드리븐 아키텍처를 도입하고 Outbox 패턴을 적용하여 데이터 원자성과 서비스 간 결합도를 개선했습니다.</p>
+
+        <p class="label label--problem">[문제]</p>
+        <ul class="bullets">
+          <li>모놀리식 구조로 인해 특정 기능 장애가 전체 서비스로 확산</li>
+          <li>일부 기능 수정 시 전체 서비스 배포 필요 → 배포 리스크 증가</li>
+          <li>동기 호출 구조로 인해 서비스 간 결합도가 높고 확장성 제한</li>
+        </ul>
+
+        <p class="label label--solve">[해결 방안]</p>
+        <ul class="bullets">
+          <li>Strangler 패턴을 적용하여 청구 도메인을 점진적으로 분리</li>
+          <li>Kafka 기반 이벤트 드리븐 아키텍처 도입으로 비동기 통신 구조 전환</li>
+          <li>이벤트 발행의 원자성 보장을 위해 Outbox 패턴 적용</li>
+          <li>폴링 기반 이벤트 발행 구조를 설계하여 애플리케이션 레벨에서 제어 가능하도록 구성</li>
+        </ul>
+
+        <p class="label label--analysis">[문제 분석 및 해결]</p>
+
+        <p class="sub">이벤트 발행의 원자성 문제</p>
+        <ul class="bullets">
+          <li>DB 트랜잭션과 Kafka 전송이 분리되어 데이터 불일치 발생</li>
+          <li>Outbox 테이블을 도입하여 서비스 로직과 이벤트 데이터를 하나의 트랜잭션으로 처리하고, Outbox를 기반으로 이벤트를 발행하여 데이터 일관성 확보</li>
+        </ul>
+
+        <p class="sub">이벤트 발행 방식으로 Polling 선택</p>
+        <ul class="bullets">
+          <li>CDC(Debezium) 방식은 WAL 레벨 변경 및 리플리케이션 슬롯 등 DB 설정과 운영 리스크가 있다고 판단하여 추후 도입 고려</li>
+          <li>초기 단계에서는 안정성과 제어 가능성을 우선하여 Polling 방식 선택, 애플리케이션 레벨에서 제어 및 장애 대응이 용이하고, 환급 서비스는 실시간성보다 안정성이 중요하다고 판단</li>
+        </ul>
+
+        <p class="sub">분산 환경에서 중복 및 순서 문제</p>
+        <ul class="bullets">
+          <li>다수 인스턴스에서 폴링 시 이벤트 중복 발행 가능, 파티션 키 기반 순서 보장 어려움</li>
+          <li><code>FOR UPDATE SKIP LOCKED</code>를 활용하여 중복 처리 방지와 병렬 처리를 동시에 확보</li>
+          <li>파티션 키 기준으로 이벤트를 조회하여 동일 키는 하나의 인스턴스에서 순차 처리하도록 설계</li>
+        </ul>
+
+        <p class="sub">단건 발행으로 인한 성능 문제</p>
+        <ul class="bullets">
+          <li>개별 이벤트 순차 발행으로 파티션 키 하나당 최대 약 3,600건 발행에 약 12,000ms 소요 (네트워크 왕복 누적)</li>
+          <li>최대 500건 단위 batch 처리 + Jsonb 컬럼 저장 + lz4 압축으로 개선</li>
+        </ul>
+
+        <p class="label label--result">[성과]</p>
+        <ul class="bullets">
+          <li>배당 1건당 약 3,600건의 이벤트를 <strong>12,000ms → 800ms로 처리 (약 93% 개선)</strong></li>
+          <li>서비스 장애가 전체 시스템으로 확산되지 않도록 구조 개선</li>
+          <li>기능 단위 배포가 가능해져 배포 리스크 감소</li>
+          <li>트래픽이 집중되는 청구 도메인을 독립적으로 점진 확장 가능하도록 구조 개선</li>
+        </ul>
+
+        <p class="label label--trouble">[구조]</p>
+        <figure class="figure figure--xl">
+          <img src="assets/img/diagram-outbox-full.png" alt="Outbox 패턴 기반 이벤트 발행/소비 전체 구조도">
+        </figure>
+      </div>
+
+      <!-- 보험 상담 보장 분석 -->
+      <div class="block">
+        <h3 class="project__title">보험 상담 보장 분석 <span class="period">2025. 04 – 2025. 05</span></h3>
+        <ul class="meta">
+          <li>참여인원 : BackEnd 1명 / FrontEnd 1명 / 기획 1명 / 디자인 1명 / 총 4명</li>
+          <li>담당업무 : 보장 분석 스크래핑, 스크래핑 서버 구성, DB 설계</li>
+          <li>사용기술 : Kotlin, Jooq, Spring Boot, PostgreSQL, AWS(EC2)</li>
+        </ul>
+
+        <p class="label label--overview">[개요]</p>
+        <p class="text">보험 보장 분석 웹에 분산된 데이터를 상담원이 직접 조회해야 하는 비효율 문제를 해결하기 위해</p>
+        <p class="text">스크래핑 기반 데이터 수집 및 백오피스 조회 기능을 설계 및 구현했습니다.</p>
+
+        <p class="label label--problem">[문제]</p>
+        <ul class="bullets">
+          <li>외부 보장 분석 웹에서 API 미제공 및 네트워크 분석 불가로 인해 데이터 자동 수집 불가능</li>
+          <li>상담원이 직접 웹에 접속하여 정보를 확인해야 하는 비효율적인 업무 구조 존재</li>
+        </ul>
+
+        <p class="label label--solve">[해결 방안]</p>
+        <ul class="bullets">
+          <li>Kotlin + Selenium(headless) 기반 스크래핑 서버 구축으로 데이터 자동 수집</li>
+          <li>수집 데이터를 DB에 저장하여 백오피스에서 즉시 조회 가능하도록 기능 개발</li>
+          <li>Firefox + GeckoDriver 조합을 선택하여 ChromeDriver 대비 버전 호환성 문제 최소화 및 운영 안정성 확보</li>
+        </ul>
+
+        <p class="label label--analysis">[문제 분석 및 해결]</p>
+
+        <p class="sub">스크래핑 시 페이지 로딩 과정의 메모리 스파이크로 Out Of Memory 발생</p>
+        <ul class="bullets">
+          <li>서버 스펙 업그레이드 대신 SWAP 2GiB 적용으로 비용 증가 없이 문제 해결</li>
+          <li>t4g.small 환경을 유지하면서 안정적으로 스크래핑 처리 가능하도록 개선</li>
+        </ul>
+
+        <p class="sub">AJAX 로딩 및 SPA 특성으로 인한 DOM 지연 렌더링 문제</p>
+        <ul class="bullets">
+          <li>WebDriverWait 기반 명시적 대기와 예외 처리 로직 구성</li>
+          <li>재시도 로직을 구현하여 데이터 누락 없이 안정적인 수집 구조 구축</li>
+        </ul>
+
+        <p class="label label--result">[성과]</p>
+        <ul class="bullets">
+          <li>스크래핑 처리 시간 <strong>10,000ms → 7,000ms (30% 개선)</strong></li>
+          <li>상담원의 수동 조회 과정 제거로 업무 효율성 개선</li>
+          <li>외부 의존적인 데이터 조회 구조를 내부 시스템으로 전환하여 운영 안정성 확보</li>
+          <li>추가 인프라 비용 없이 메모리 문제 해결</li>
+        </ul>
+
+        <p class="etc"><strong>기타 수행 프로젝트</strong> : 보험금 Q&amp;A 서비스(형태소 분석 기반 키워드 랭킹, Redis 집계로 DB Write I/O 95% 감소), 지역별 대리인 관리 및 통계(단일 거대 쿼리 분리로 3,000ms → 800ms 개선)</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ 웰그램 -->
+  <section class="section">
+    <h2 class="section__title">웰그램 | 데이터개발팀 <span class="period">2020. 10 – 2023. 09</span></h2>
+
+    <div class="indent">
+
+      <!-- 보험 상품 데이터 수집 및 처리 파이프라인 구축 -->
+      <div class="block">
+        <h3 class="project__title">보험 상품 데이터 수집 및 처리 파이프라인 구축 <span class="period">2020. 11 – 2023. 07</span></h3>
+        <ul class="meta">
+          <li>참여인원 : BackEnd 5명</li>
+          <li>담당업무 : 데이터 수집/처리 구조 설계, 공통 모듈화, 데이터 이력 관리, BackEnd 및 FrontEnd 개발</li>
+          <li>사용기술 : Java, MyBatis, Spring Boot, MySQL, JavaScript, JSP, jQuery, AWS(EC2)</li>
+        </ul>
+
+        <p class="label label--overview">[개요]</p>
+        <p class="text">40여 개 보험사의 다이렉트 및 대면 상품 데이터를 수집하고, 보험 비교 서비스에서 활용할 수 있도록 데이터 처리 파이프라인을 설계 및 구현했습니다.</p>
+        <p class="text">하루 평균 10만 건 이상의 데이터를 처리하는 환경에서 안정적인 수집과 정합성을 확보하고,</p>
+        <p class="text">반복적인 스크래핑 로직을 공통화하여 유지보수성을 개선했으며 데이터 변경 이력을 관리하는 아카이빙 구조를 도입했습니다.</p>
+
+        <p class="label label--problem">[문제]</p>
+        <ul class="bullets">
+          <li>데이터 수집 환경에서 에러 발생 시 원인 파악 어려움 (서버 내 로그 파일 직접 확인 필요)</li>
+          <li>스크래핑 로직이 보험사별로 분산되어 코드 중복 및 유지보수성 저하</li>
+          <li>API 호출 누락, 중복 호출, 예외 미처리 등 비정상 케이스 발생</li>
+          <li>보험 상품 개정 여부를 수동으로 확인하여 누락 및 불필요 작업 발생</li>
+          <li>데이터 변경 이력을 관리할 수 없어 정합성 검증 어려움</li>
+        </ul>
+
+        <p class="label label--solve">[해결 방안]</p>
+        <ul class="bullets">
+          <li>ErrorCode 기반 에러 로깅 구조를 설계하여 주요 예외를 선별 저장, 백오피스에서 실시간 모니터링</li>
+          <li>스크래핑 종료 후 API 호출 구간 및 반복 로직(클릭, 스크롤, 대기)을 공통 모듈로 분리</li>
+          <li>아카이빙 테이블을 도입하여 기존 데이터를 이력으로 저장하고, 작업 테이블과 비교하여 변경 사항을 자동 감지</li>
+        </ul>
+
+        <p class="label label--analysis">[문제 분석 및 해결]</p>
+
+        <p class="sub">데이터 수집 환경에서의 에러 추적 문제</p>
+        <ul class="bullets">
+          <li>하루 평균 10만 건 이상의 데이터 처리 중 에러 발생 시 로그 파일 기반으로는 원인 파악이 어려움</li>
+          <li>ErrorCode Enum을 정의하여 주요 에러 발생 구간에 구조화된 로그를 저장</li>
+          <li>이를 통해 백오피스에서 실시간으로 에러 현황을 확인할 수 있도록 개선하고 대응 시간 단축</li>
+        </ul>
+
+        <p class="sub">중복 코드 및 유지보수성 저하 문제</p>
+        <ul class="bullets">
+          <li>보험사별로 개별 구현된 로직으로 인해 코드 중복 및 품질 편차 발생</li>
+          <li>스크래핑 종료 후 데이터 저장 API 호출 구간을 공통화하여 호출 누락 및 중복 문제 방지</li>
+          <li>클릭, 스크롤, 대기 처리 등 반복 동작을 공통 컴포넌트로 분리하여 재사용 구조로 개선</li>
+          <li>페이지 구조 변경 시 공통 모듈을 사용해 코드 수정을 최소화하여 유지보수 비용 감소 및 작업 효율 향상</li>
+        </ul>
+
+        <p class="sub">데이터 변경 감지 및 이력 관리 문제</p>
+        <ul class="bullets">
+          <li>보험 상품 개정 여부를 수동으로 확인하여 누락 및 불필요한 재처리 발생</li>
+          <li>아카이빙 테이블을 도입하여 기존 데이터를 이력으로 저장하고 최신 데이터로 갱신</li>
+          <li>작업 테이블과 아카이빙 데이터를 비교하여 변경 여부를 자동으로 식별하도록 구현</li>
+        </ul>
+
+        <p class="label label--result">[성과]</p>
+        <ul class="bullets">
+          <li>하루 평균 10만 건 이상의 데이터 수집 및 처리 파이프라인 안정화</li>
+          <li>백오피스 실시간 에러 모니터링으로 <strong>에러 대응 시간 약 30% 단축</strong></li>
+          <li>공통 모듈화로 페이지 리뉴얼 시 수정 범위 최소화, 유지보수 비용 절감 및 <strong>작업 효율 약 20% 개선</strong></li>
+          <li>데이터 변경 감지 자동화로 개정 상품 누락 및 불필요 재작업 제거</li>
+        </ul>
+      </div>
+
+      <!-- 스크래핑 API 성능 개선 -->
+      <div class="block">
+        <h3 class="project__title">스크래핑 API 성능 개선 <span class="period">2022. 01 – 2022. 10</span></h3>
+        <ul class="meta">
+          <li>참여인원 : BackEnd 2명 / 총 2명</li>
+          <li>담당업무 : 데이터 관리, BackEnd 개발</li>
+          <li>사용기술 : Java, MyBatis, Spring Boot, MySQL, AWS(EC2)</li>
+        </ul>
+
+        <p class="label label--overview">[개요]</p>
+        <p class="text">백오피스와 사용자 서비스가 공통으로 사용하던 데이터 조회 구조를 분리하고 비효율 쿼리를 개선하여</p>
+        <p class="text">API 응답 속도와 데이터 처리 성능을 향상시켰습니다.</p>
+
+        <p class="label label--problem">[문제]</p>
+        <ul class="bullets">
+          <li>백오피스와 사용자 서비스가 동일 쿼리를 사용하여 불필요한 데이터까지 조회</li>
+          <li>비효율적인 JOIN, 서브쿼리, 와일드카드로 인한 성능 저하와 레거시 쿼리 누적</li>
+          <li>동시 접근 시 테이블 락 경합으로 인한 성능 저하 및 데이터 충돌</li>
+        </ul>
+
+        <p class="label label--solve">[해결 방안 및 성과]</p>
+        <ul class="bullets">
+          <li>조회 목적별 쿼리 분리로 불필요 데이터 조회 제거</li>
+          <li>보험료 조회 쿼리 분리 및 인덱스 활용 : <strong>3,700ms → 170ms (약 95% 개선)</strong></li>
+          <li>UNION ALL 제거 및 조회 구조 단순화 : <strong>2,000ms → 1,200ms</strong></li>
+          <li>서브쿼리를 JOIN으로 변경 : <strong>1,300ms → 900ms</strong></li>
+          <li>DISTINCT 제거 : <strong>1,500ms → 400ms</strong></li>
+          <li>SELECT 컬럼 최소화(약 20개 제거)로 불필요 I/O 감소</li>
+          <li><code>updated_at</code> 기반 낙관적 락으로 충돌 감지, 특정 케이스(스크래핑 할당)에 한해 비관적 락 적용, 데이터 정합성 확보</li>
+        </ul>
+
+        <p class="etc"><strong>기타 수행 프로젝트</strong> : 사내 상품 관리 시스템 개발(노션 수기 관리를 백오피스로 이전하는 TF 제안 및 주도, 평균 작업 시간 60분 → 20분), 사용자 성향 보험 추천 개발(질문 이탈률 개선으로 방문자 수 약 20% 증가)</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ 기술 스택 -->
+  <section class="section">
+    <h2 class="section__title">기술 스택</h2>
+    <dl class="stack">
+      <dt>언어 &amp; 프레임워크</dt>
+      <dd>Java(21/17), Kotlin, Spring Boot(4.x/3.x), Spring Cloud Gateway, MyBatis, Exposed, Jooq, JPA</dd>
+      <dt>DB &amp; 메시징 &amp; 캐시</dt>
+      <dd>PostgreSQL, MySQL, Kafka, Redis, RabbitMQ</dd>
+      <dt>DevOps &amp; 버전 관리</dt>
+      <dd>AWS(EC2, ECS, RDS, S3, MSK, Parameter Store), Docker, GitLab CI, Git</dd>
+      <dt>API 계약 &amp; 테스트</dt>
+      <dd>OpenAPI(springdoc), Testcontainers, ArchUnit, JUnit 5</dd>
+      <dt>Others</dt>
+      <dd>Selenium, Claude Code, Notion, Jira, Slack</dd>
+    </dl>
+  </section>
+
+  <div class="doc-end">
+    <span>김용준 | Backend Engineer</span>
+    <span><a href="career-long.html">경력기술서 긴 버전 →</a></span>
+  </div>
+
+</main>
+
+</body>
+</html>
