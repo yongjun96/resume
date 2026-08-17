@@ -15,15 +15,14 @@
   <div class="site-nav__inner">
     <a class="site-nav__brand" href="index.html">김용준</a>
     <a class="site-nav__link" href="resume.html">이력서</a>
-    <a class="site-nav__link" href="career-short.html">경력기술서(Short ver.)</a>
+    <a class="site-nav__link" href="career-short.html">경력기술서</a>
     <a class="site-nav__link" href="career-long.html" aria-current="page">경력기술서(Long ver.)</a>
     <span class="site-nav__spacer"></span>
     <button class="site-nav__pdf site-nav__pdf--primary" type="button" onclick="window.print()" title="인쇄 창에서 대상을 'PDF로 저장'으로 선택하세요"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11 3h2v8.17l3.09-3.08 1.41 1.41L12 15 6.5 9.5l1.41-1.41L11 11.17V3ZM5 18h14v2H5v-2Z"/></svg>PDF로 저장</button>
-    <a class="site-nav__pdf" href="assets/pdf/career-long.pdf" target="_blank" rel="noopener">PDF 원본(2026.08 이전)</a>
   </div>
 </nav>
 
-<main class="page">
+<main class="page page--career">
 
   <h1 class="doc-title">Career</h1>
 
@@ -38,13 +37,6 @@
     </div>
   </header>
 
-  <section class="section intro">
-    <p>Java &amp; Kotlin / Spring 기반 5년차 백엔드 개발자입니다.</p>
-    <p>연간 70만 건의 보험금 대신 청구를 처리하는 인슈어테크 플랫폼을 개발 및 운영했고, 모놀리식 서비스에 Strangler 패턴과 Kafka 기반 이벤트 드리븐 아키텍처를 도입했습니다.</p>
-    <p>현재는 Spring Boot 4 / Java 21 기반 백엔드를 초기 아키텍처부터 단독 설계하며, API 계약(OpenAPI)과 CI 게이트로 코드와 문서의 불일치를 머지 전에 차단하는 방식을 지향합니다.</p>
-    <p>Claude Code 기반 AI 워크플로우를 만들어 프로젝트에 적용했으며, 새로운 기술은 목적 없이 도입하기보다 문제 해결에 필요하다고 판단될 때 빠르게 검토 및 학습하여 실무에 적용하는 방식을 지향합니다.</p>
-  </section>
-
   <!-- ============================================================ 핀게이트 -->
   <section class="section">
     <h2 class="section__title">핀게이트 | 플랫폼개발팀 <span class="period">2026. 04 – 재직중</span></h2>
@@ -57,12 +49,12 @@
         <ul class="meta">
           <li>참여인원 : BackEnd 1명(본인) / FrontEnd 1명 / 기획 1명 / 총 3명</li>
           <li>담당업무 : 백엔드 아키텍처 설계 및 구현 전담, OpenAPI 계약 파이프라인 구축, DB 설계, CI/CD 구축</li>
-          <li>사용기술 : Java 21, Spring Boot 4.1, Spring Cloud Gateway(WebFlux), MyBatis, PostgreSQL, Redis, AWS Parameter Store, Docker, GitLab CI, Claude Code</li>
+          <li>사용기술 : Java, Spring Boot, Spring Cloud Gateway(WebFlux), MyBatis, PostgreSQL, Redis, AWS Parameter Store, Docker, GitLab CI, Claude Code</li>
         </ul>
 
         <p class="text">보험 정보(공지, 뉴스, 판례, Q&amp;A, 통계, 보험사 디렉토리)를 웹과 앱으로 제공하고 관리자 백오피스로 운영하는 서비스입니다.</p>
         <p class="text">백엔드 전체를 빈 저장소에서 시작해 설계부터 구현 및 배포까지 단독으로 담당했습니다.</p>
-        <p class="text">공개 API 7개 도메인 48 오퍼레이션(39경로)과 관리자 백오피스, DB 16개 테이블을 구축했고 FrontEnd와 BE의 계약 불일치를 CI가 잡아내는 OpenAPI 계약 파이프라인을 만들었습니다.</p>
+        <p class="text">공개 API 7개 도메인 48 오퍼레이션(39경로)과 관리자 백오피스, DB 16개 테이블을 구축했고 FrontEnd와 BackEnd의 계약 불일치를 CI가 잡아내는 OpenAPI 계약 파이프라인을 만들었습니다.</p>
 
         <p class="label label--why">[Why?]</p>
 
@@ -84,7 +76,7 @@
 
         <p class="label label--trouble">[Trouble Shooting]</p>
 
-        <p class="sub">[문제 1. FrontEnd와 BE의 계약이 어긋나는 문제]</p>
+        <p class="sub">[문제 1. FrontEnd와 BackEnd의 계약이 어긋나는 문제]</p>
         <p class="text">프론트엔드가 API 타입을 수기로 작성하고 있었습니다. 서버 DTO가 바뀌어도 프론트는 컴파일이 통과하고 런타임에 값이 비어서야 문제가 드러납니다.</p>
         <p class="text">API 문서도 별도로 관리되어 코드와 상시 어긋났습니다. 기획 문서와 백엔드 코드, 프론트 타입 세 곳이 각자 관리되면서 서로 어긋나는 상태였습니다.</p>
 
@@ -109,10 +101,12 @@
         <p class="text">대조 결과 기획 발행 없이 개발이 먼저 신설한 엔드포인트가 나왔습니다. 이를 오류로 처리하면 정당한 작업이 막히므로 <code>DEV_OWNED</code> 목록에 사유와 함께 올려 차단하지 않고 가시화했습니다.</p>
 
         <p class="sub">[문제 3. 헤더 위조로 다른 사용자가 될 수 있는 문제]</p>
-        <p class="text">다운스트림 서비스는 <code>X-User-*</code> 신원 헤더를 Gateway가 부여한 값으로 신뢰합니다. Gateway가 클라이언트 발신 헤더를 정화하지 않으면 외부에서 헤더만 위조해 다른 사용자로 통과할 수 있습니다.</p>
+        <p class="text">인증은 Gateway에서만 수행하고 뒤쪽 서버는 인증을 다시 하지 않습니다. Gateway가 토큰 검증 결과를 <code>X-User-Id</code>, <code>X-User-Role</code> 같은 헤더에 담아 전달하면 다운스트림 서비스는 그 값을 로그인한 사용자로 신뢰합니다.</p>
+        <p class="text">그런데 헤더는 요청을 만드는 쪽이 임의로 붙일 수 있습니다. 다운스트림에 도착한 <code>X-User-Id</code>가 Gateway가 부여한 값인지 클라이언트가 붙인 값인지 구분할 방법이 없기 때문에, Gateway가 클라이언트 발신 헤더를 정화하지 않으면 외부에서 헤더만 위조해 다른 사용자나 관리자로 통과할 수 있습니다.</p>
 
         <p class="label label--plain">[해결]</p>
-        <p class="text">Gateway에서는 클라이언트가 보낸 <code>X-User-*</code> 신원 헤더를 항상 제거한 뒤 재부여하도록 해서 헤더 위조로 다른 사용자가 되는 경로를 차단했습니다.</p>
+        <p class="text">Gateway가 요청을 받으면 클라이언트가 보낸 <code>X-User-*</code> 헤더를 조건 없이 먼저 제거하고, 그다음 토큰 검증으로 확인한 신원을 새로 부여하도록 순서를 고정했습니다. 다운스트림에 도착하는 신원 헤더는 반드시 Gateway가 방금 생성한 값이므로 위조 경로가 사라집니다.</p>
+        <p class="text">여기서 핵심은 덮어쓰기가 아니라 항상 먼저 제거하는 것입니다. 인증에 성공한 요청만 덮어쓰도록 만들면 로그인이나 공개 API 같은 비인증 경로로 들어온 요청은 헤더가 덮어써지지 않아 위조값이 그대로 통과합니다.</p>
 
         <p class="sub">[문제 4. CI가 코드가 아닌 환경 때문에 실패하는 문제]</p>
         <p class="text">DB Mapper 테스트가 로컬에 띄워 둔 PostgreSQL에 의존하고 있어 CI 러너에서는 동작하지 않았습니다. 실패 원인도 매번 달라 재시도로 넘기기 쉬운 상태였습니다.</p>
@@ -149,7 +143,7 @@
         <ul class="meta">
           <li>참여인원 : BackEnd 1명(본인) / 총 1명</li>
           <li>담당업무 : 백엔드 기능 개발 및 성능 개선, 장애 대응, 모노레포 및 CI 통합, DB 마이그레이션</li>
-          <li>사용기술 : Java 17, Spring Boot 3.x, Spring Cloud Gateway, MyBatis, PostgreSQL, Redis, RabbitMQ, Vue 3, Docker, GitLab CI, Claude Code</li>
+          <li>사용기술 : Java, Spring Boot, Spring Cloud Gateway, MyBatis, PostgreSQL, Redis, RabbitMQ, Vue, Docker, GitLab CI, Claude Code</li>
         </ul>
 
         <p class="text">보험 설계사가 고객의 보유 계약을 수집하고 분석해 상품을 비교 및 설계하는 B2B2C 플랫폼입니다.</p>
@@ -222,7 +216,7 @@
         <ul class="meta">
           <li>참여인원 : BackEnd 2명(본인) / FrontEnd 2명 / 총 4명 (전사 공유 플러그인 마켓플레이스)</li>
           <li>담당업무 : 백엔드 스캐폴드 플러그인 신설과 오너십, 개발 문서 색인 생성, 문서 검증 엔진 개발</li>
-          <li>사용기술 : Claude Code Plugin(Skill/Hook), Node.js 22, GitLab CI</li>
+          <li>사용기술 : Claude Code Plugin(Skill/Hook), Node.js, GitLab CI</li>
         </ul>
 
         <p class="text">전사 개발 조직이 공유하는 AI 협업 도구 마켓플레이스에 플러그인을 개발했습니다.</p>
@@ -782,13 +776,13 @@
     <h2 class="section__title">기술 스택</h2>
     <dl class="stack">
       <dt>언어 &amp; 프레임워크</dt>
-      <dd>Java(21/17), Kotlin, Spring Boot(4.x/3.x), Spring Cloud Gateway, MyBatis, Exposed, Jooq, JPA</dd>
+      <dd>Java, Kotlin, Spring Boot, Spring Cloud Gateway, MyBatis, Exposed, Jooq, JPA</dd>
       <dt>DB &amp; 메시징 &amp; 캐시</dt>
       <dd>PostgreSQL, MySQL, Kafka, Redis, RabbitMQ</dd>
       <dt>DevOps &amp; 버전 관리</dt>
       <dd>AWS(EC2, ECS, RDS, S3, MSK, Parameter Store), Docker, GitLab CI, Git</dd>
       <dt>API 계약 &amp; 테스트</dt>
-      <dd>OpenAPI(springdoc), Testcontainers, JUnit 5</dd>
+      <dd>OpenAPI(springdoc), Testcontainers, JUnit</dd>
       <dt>Others</dt>
       <dd>Selenium(Firefox, Chrome), Claude Code, Notion, Jira, Slack</dd>
     </dl>

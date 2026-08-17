@@ -287,6 +287,15 @@ a {
   border-top: 1px dashed var(--line);
 }
 
+/* 경력기술서는 프로젝트 하나가 길어 어디서 끊기는지 보이지 않는다.
+   프로젝트 사이(같은 회사 안)에 점선을 넣어 단위를 구분한다.
+   첫 프로젝트 위에는 선이 생기지 않는다. */
+.page--career .block + .block {
+  margin-top: 30px;
+  padding-top: 24px;
+  border-top: 1px dashed var(--line);
+}
+
 /* 프로젝트 제목 */
 .project__title {
   font-size: 16px;
@@ -320,10 +329,23 @@ ul.bullets ul {
   list-style: circle;
 }
 
+/* 성과 항목에 덧붙이는 한 줄 부연 설명.
+   수치(성과)가 먼저 읽히도록 본문보다 작고 연하게 낮춘다. */
+.li-note {
+  display: block;
+  font-size: 13px;
+  color: var(--sub);
+  margin-top: 1px;
+}
+
+/* 경력기술서 프로젝트 메타(참여인원·담당업무·사용기술).
+   이력서의 메타 줄(.meta-line)과 같은 크기·색으로 맞춰
+   두 문서에서 부가 정보가 동일한 위계로 읽히게 한다. */
 ul.meta {
   margin: 2px 0 12px;
   padding-left: 20px;
-  font-size: 14.5px;
+  font-size: 13.5px;
+  color: var(--sub);
 }
 
 ul.meta li {
@@ -506,11 +528,33 @@ code {
 
 .landing__links {
   display: flex;
-  gap: 18px;
+  align-items: center;
+  gap: 13px;
   flex-wrap: wrap;
   font-size: 15px;
-  padding-bottom: 26px;
+  padding-bottom: 16px;
   border-bottom: 3px solid #111;
+}
+
+/* 이력서 문서 헤더의 연락처와 같은 아이콘+텍스트 구성.
+   랜딩은 본문이 작으므로 아이콘도 한 단계 줄인다. */
+.landing__links span,
+.landing__links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.landing__links .ico {
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.landing__links .ico svg {
+  width: 16px;
+  height: 16px;
+  display: block;
 }
 
 .cards {
@@ -717,6 +761,7 @@ code {
   /* 여백 — 화면 기준 값을 그대로 쓰면 인쇄에서 공백이 과해지고
      마지막 한두 줄이 새 페이지로 밀려난다 */
   .block + .company { margin-top: 20px; padding-top: 14px; }
+  .page--career .block + .block { margin-top: 18px; padding-top: 14px; }
   .block { margin-bottom: 16px; }
   .section { margin-top: 22px; }
   .section + .section { padding-top: 16px; }
