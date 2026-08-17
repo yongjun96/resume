@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>김용준 경력기술서(짧은 버전)</title>
+<title>김용준 경력기술서(Short ver.)</title>
 <meta name="description" content="백엔드 개발자 김용준 경력기술서 요약본 - 보험 정보 아카이브 플랫폼, 봄봄 백엔드 개선, AI 개발 플랫폼 플러그인, 발급매니저 앱, 데이터 수집 파이프라인">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <link rel="stylesheet" href="assets/css/style.css">
@@ -15,8 +15,8 @@
   <div class="site-nav__inner">
     <a class="site-nav__brand" href="index.html">김용준</a>
     <a class="site-nav__link" href="resume.html">이력서</a>
-    <a class="site-nav__link" href="career-short.html" aria-current="page">경력기술서(짧은 버전)</a>
-    <a class="site-nav__link" href="career-long.html">경력기술서(긴 버전)</a>
+    <a class="site-nav__link" href="career-short.html" aria-current="page">경력기술서(Short ver.)</a>
+    <a class="site-nav__link" href="career-long.html">경력기술서(Long ver.)</a>
     <span class="site-nav__spacer"></span>
     <button class="site-nav__pdf site-nav__pdf--primary" type="button" onclick="window.print()" title="인쇄 창에서 대상을 'PDF로 저장'으로 선택하세요"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11 3h2v8.17l3.09-3.08 1.41 1.41L12 15 6.5 9.5l1.41-1.41L11 11.17V3ZM5 18h14v2H5v-2Z"/></svg>PDF로 저장</button>
     <a class="site-nav__pdf" href="assets/pdf/career-short.pdf" target="_blank" rel="noopener">PDF 원본(2026.08 이전)</a>
@@ -42,6 +42,7 @@
     <p>Java &amp; Kotlin / Spring 기반 5년차 백엔드 개발자입니다.</p>
     <p>연간 70만 건의 보험금 대신 청구를 처리하는 인슈어테크 플랫폼을 개발 및 운영했고, 모놀리식 서비스에 Strangler 패턴과 Kafka 기반 이벤트 드리븐 아키텍처를 도입했습니다.</p>
     <p>현재는 Spring Boot 4 / Java 21 기반 백엔드를 초기 아키텍처부터 단독 설계하며, API 계약(OpenAPI)과 CI 게이트로 코드와 문서의 불일치를 머지 전에 차단하는 방식을 지향합니다.</p>
+    <p>Claude Code 기반 AI 워크플로우를 만들어 프로젝트에 적용했으며, 새로운 기술은 목적 없이 도입하기보다 문제 해결에 필요하다고 판단될 때 빠르게 검토 및 학습하여 실무에 적용하는 방식을 지향합니다.</p>
   </section>
 
   <!-- ============================================================ 핀게이트 -->
@@ -54,46 +55,44 @@
       <div class="block">
         <h3 class="project__title">보험 정보 아카이브 플랫폼 백엔드 구축 <span class="period">2026. 07 – 진행중</span></h3>
         <ul class="meta">
-          <li>참여인원 : BackEnd 1명(본인) / FrontEnd 1명 / 기획 2명 / 총 4명</li>
+          <li>참여인원 : BackEnd 1명(본인) / FrontEnd 1명 / 기획 1명 / 총 3명</li>
           <li>담당업무 : 백엔드 아키텍처 설계 및 구현 전담, OpenAPI 계약 파이프라인 구축, DB 설계, CI/CD 구축</li>
-          <li>사용기술 : Java 21, Spring Boot 4.1, Spring Cloud Gateway(WebFlux), MyBatis, PostgreSQL, Redis, AWS Parameter Store, Docker, GitLab CI</li>
+          <li>사용기술 : Java 21, Spring Boot 4.1, Spring Cloud Gateway(WebFlux), MyBatis, PostgreSQL, Redis, AWS Parameter Store, Docker, GitLab CI, Claude Code</li>
         </ul>
 
         <p class="label label--overview">[개요]</p>
         <p class="text">보험 정보(공지, 뉴스, 판례, Q&amp;A, 통계, 보험사 디렉토리)를 웹/앱으로 제공하고 관리자 백오피스로 운영하는 서비스입니다.</p>
         <p class="text">백엔드 전체를 빈 저장소에서 시작해 설계, 구현, 배포까지 단독으로 담당했습니다.</p>
-        <p class="text">공개 API 7개 도메인 48 오퍼레이션과 관리자 백오피스, DB 16개 테이블을 구축했고, FE와 BE의 계약 불일치를 CI에서 잡아내는 OpenAPI 계약 파이프라인을 만들었습니다.</p>
+        <p class="text">공개 API 7개 도메인 48 오퍼레이션과 관리자 백오피스, DB 16개 테이블을 구축했고, FrontEnd와 BE의 계약 불일치를 CI에서 잡아내는 OpenAPI 계약 파이프라인을 만들었습니다.</p>
 
         <p class="label label--problem">[문제]</p>
         <ul class="bullets">
-          <li>기획 문서, 백엔드 코드, 프론트 타입이 각자 관리되어 서로 어긋남 (FE는 API 타입을 수기 작성)</li>
-          <li>경로 기반 인가 구조에서 신규 엔드포인트의 인가 설정 누락 시 조용히 개방되는(fail-open) 위험 존재</li>
-          <li>관리자 인증, 시크릿 관리, 배포가 프로젝트 초기 상태로 정리되지 않은 상황</li>
+          <li>기획 문서, 백엔드 코드, 프론트 타입이 각자 관리되어 서로 어긋남 (FrontEnd는 API 타입을 수기 작성)</li>
+          <li>관리자 인증과 배포가 프로젝트 초기 상태로 정리되지 않은 상황</li>
+          <li>백엔드 1인 체제라 사람 리뷰어를 붙일 수 없어, 리뷰 지적이 코멘트로만 남고 반영 여부가 작성자 재량에 맡겨짐</li>
         </ul>
 
         <p class="label label--solve">[해결 방안]</p>
         <ul class="bullets">
           <li>Gateway(WebFlux) + Application(MVC) + Admin + Common 4모듈 Gradle 골격을 초기 커밋부터 설계</li>
           <li>OpenAPI 스펙을 컨트롤러 코드에서 생성하고, CI 드리프트 게이트로 코드↔문서 불일치를 머지 단계에서 차단</li>
-          <li>인가 모델을 경로 기반에서 리소스 기반(<code>@PreAuthorize</code>)으로 재설계하고 누락을 ArchUnit 규칙으로 빌드에서 강제</li>
           <li>관리자 인증을 JWT에서 쿠키 세션(Redis, 로그인 실패 잠금 포함)으로 재설계</li>
-          <li>API 버저닝 및 폐기 절차를 팀 규약으로 확정하고 게이트웨이에 설정으로 집행</li>
+          <li>API 버저닝 및 폐기 절차를 팀 규약으로 확정하고 Gateway에 설정으로 집행</li>
+          <li>AI 코드리뷰를 코멘트가 아닌 CI 게이트로 운영, 심각도를 BLOCK/WARN/INFO로 나눠 BLOCK만 머지를 차단</li>
         </ul>
 
         <p class="label label--analysis">[문제 분석 및 해결]</p>
 
-        <p class="sub">FE/BE 계약 드리프트 문제</p>
+        <p class="sub">FrontEnd/BE 계약 드리프트 문제</p>
         <ul class="bullets">
-          <li>모듈별 스펙을 단일 문서로 조립하는 CLI를 직접 제작, 스키마 이름 충돌 검출, 라우팅 프리픽스를 게이트웨이 설정에서 읽어 문서가 옛 주소를 가리키지 않도록 설계</li>
+          <li>모듈별 스펙을 단일 문서로 조립하는 CLI를 직접 제작, 스키마 이름 충돌 검출, 라우팅 프리픽스를 Gateway 설정에서 읽어 문서가 옛 주소를 가리키지 않도록 설계</li>
           <li>CI 게이트가 코드만 고치고 스펙을 두고 온 커밋의 머지를 차단하고, 프론트는 <code>openapi-typescript</code>로 생성한 타입만 소비</li>
           <li>백엔드와 기획 문서의 경로 좌표계가 달라 각자 자기 문서와는 일치하지만 실제로는 어긋나는 상태였음. 리팩토링에 영향을 받지 않는 <code>operationId</code>를 앵커로 양쪽 계약을 CI에서 전수 대조</li>
         </ul>
 
-        <p class="sub">인가 설정 누락(fail-open) 문제</p>
+        <p class="sub">헤더 위조로 다른 사용자가 되는 문제</p>
         <ul class="bullets">
-          <li>관리자 컨트롤러의 <code>@PreAuthorize</code> 부착을 ArchUnit 규칙으로 강제하여 어노테이션 누락이 테스트 단계에서 실패하도록 구성</li>
-          <li>게이트웨이에서 클라이언트가 보낸 신원 헤더(<code>X-User-*</code>)를 항상 제거 후 재부여하여 신원 스푸핑 차단</li>
-          <li>인가 스모크 테스트(개방, 401, 역할별 200/403)로 회귀 방지</li>
+          <li>Gateway에서 클라이언트가 보낸 신원 헤더(<code>X-User-*</code>)를 항상 제거 후 재부여하여 신원 스푸핑 차단</li>
         </ul>
 
         <p class="sub">API 버저닝 규약 설계</p>
@@ -106,8 +105,8 @@
         <ul class="bullets">
           <li>API 계약이 <strong>39경로, 48 오퍼레이션</strong> 규모로 커진 뒤에도 코드-문서 불일치가 머지 전에 차단되는 구조 확보</li>
           <li>프론트엔드가 별도 협의 없이 생성 타입만으로 API를 소비, 계약 관련 커뮤니케이션 비용 제거</li>
-          <li>GitLab CI 5스테이지 20+ 잡 운영, Testcontainers 기반 DB 매퍼 테스트를 CI 차단 게이트로 승격</li>
-          <li>시크릿을 AWS Parameter Store로 이관하고 미주입 시 기동 실패(fail-fast)로 전환하여 커밋된 기본값 제거</li>
+          <li>DB Mapper 테스트가 Testcontainers로 DB를 직접 띄우도록 전환하고 테스트가 실패하면 머지가 막히도록 CI 필수 통과 조건 지정</li>
+          <li>AI 리뷰를 <strong>머지 차단 CI 게이트</strong>(BLOCK/WARN/INFO)로 운영해 리뷰 지적이 코멘트로 소비되고 끝나는 상태 제거</li>
           <li>아키텍처, 버저닝, 레이트리밋 등 주요 판단을 결정 기록(ADR)으로 문서화 (5건 작성)</li>
         </ul>
       </div>
@@ -116,9 +115,9 @@
       <div class="block">
         <h3 class="project__title">보험설계 플랫폼(봄봄) 백엔드 개선 및 인프라 통합 <span class="period">2026. 04 – 2026. 07</span></h3>
         <ul class="meta">
-          <li>참여인원 : BackEnd 1명(본인)</li>
+          <li>참여인원 : BackEnd 1명(본인) / 총 1명</li>
           <li>담당업무 : 백엔드 기능 개발 및 성능 개선, 장애 대응, 모노레포/CI 통합, DB 마이그레이션</li>
-          <li>사용기술 : Java 17, Spring Boot 3.x, Spring Cloud Gateway, MyBatis, PostgreSQL, Redis, RabbitMQ, Vue 3, Docker, GitLab CI</li>
+          <li>사용기술 : Java 17, Spring Boot 3.x, Spring Cloud Gateway, MyBatis, PostgreSQL, Redis, RabbitMQ, Vue 3, Docker, GitLab CI, Claude Code</li>
         </ul>
 
         <p class="label label--overview">[개요]</p>
@@ -126,13 +125,6 @@
         <p class="text">개인정보를 다루는 금융 도메인으로, 5개 백엔드 모듈과 프론트엔드의 유지보수 및 개선과 분산된 저장소 및 CI의 통합을 담당했습니다.</p>
 
         <p class="label label--analysis">[문제 분석 및 해결]</p>
-
-        <p class="sub">설계 저장 시 상품이 무음으로 유실되는 장애</p>
-        <ul class="bullets">
-          <li>저장 루프의 불완전 행 가드가 <code>continue</code>가 아닌 <code>break</code>로 작성되어 불완전한 행 하나 뒤의 모든 상품이 저장되지 않았고, 전체 삭제 선행 + <code>@Transactional</code> 부재가 겹쳐 부분 실패가 영구 데이터 손실로 확정되는 구조였음</li>
-          <li><code>@Transactional(rollbackFor = Exception.class)</code>로 삭제+재삽입을 원자화하고, 이중 가드를 단일 <code>continue</code> 가드로 통합</li>
-          <li>스킵 행은 식별자 수준만 로깅하여 개인정보 평문 미노출 정책 준수</li>
-        </ul>
 
         <p class="sub">보험사 비교 보험료 계산의 N+1 문제</p>
         <ul class="bullets">
@@ -144,7 +136,7 @@
         <p class="sub">레거시 축약어 명명 전사 마이그레이션</p>
         <ul class="bullets">
           <li>DB 컬럼, DTO, URL, Redis 키 및 프론트까지 전 계층에 관통한 축약어(<code>clphn_no</code>, <code>cnsl</code> 등)를 풀네임으로 무중단 전환, 단일 차수 기준 223개 파일 변경</li>
-          <li>코드만 바꾸면 무음 장애가 발생하는 외부 계약 4종(프론트 payload 키, 운영 DB 데이터 값, API URL, 파일 경로)을 식별하여 동반 마이그레이션 또는 의도적 미변경으로 각각 결정</li>
+          <li>코드만 바꾸면 컴파일과 테스트는 통과하지만 런타임에 틀어지는 외부 계약 4종(프론트 payload 키, 운영 DB 데이터 값, API URL, 파일 경로)을 식별하여 동반 마이그레이션 또는 의도적 미변경으로 각각 결정</li>
           <li>개인정보 어노테이션 무손실을 정량 대조(변경 전후 개수 일치)로 검증하며 전환</li>
         </ul>
 
@@ -154,12 +146,17 @@
           <li>브랜치 푸시만으로 MR 자동 생성 → AI 코드/보안 리뷰 코멘트 게시까지 자동화하여 소수 인원 팀의 리뷰 병목 해소</li>
         </ul>
 
+        <p class="sub">AI 협업 시 규약 위반이 커밋까지 살아남는 문제</p>
+        <ul class="bullets">
+          <li>리뷰 단계에서만 잡히던 규약 위반을 편집 시점에 차단하도록 AI 협업 가드 훅을 설계 (도메인 간 패키지 임포트, 개인정보 컬럼 암호화 누락, Mapper와 DDL 불일치 3종)</li>
+        </ul>
+
         <p class="label label--result">[성과]</p>
         <ul class="bullets">
-          <li>간헐적으로만 보고되던 데이터 유실 장애의 근본 원인 규명 및 수정, 재발 패턴 문서화</li>
           <li>보험료 계산 중복 DB 조회 제거로 비교 화면 부하 감소</li>
           <li>마이그레이션 전 차수에서 5개 모듈 빌드 성공 및 개인정보 어노테이션 손실 0 유지</li>
           <li>리뷰 미수행 머지 사실상 소멸, AI 리뷰가 병합 전 CRITICAL 결함(공유 캐시 가변 노출)을 실제로 차단</li>
+          <li>도메인 경계 위반과 암호화 누락이 커밋 이전 단계에서 차단되어 리뷰 부하 감소</li>
         </ul>
       </div>
 
@@ -167,8 +164,8 @@
       <div class="block">
         <h3 class="project__title">사내 AI 개발 플랫폼 플러그인 개발 <span class="period">2026. 06 – 진행중</span></h3>
         <ul class="meta">
-          <li>참여인원 : 4명 (전사 공유 플러그인 마켓플레이스)</li>
-          <li>담당업무 : 백엔드/프론트 스캐폴드 플러그인 신설 및 오너십, 문서 검증 엔진 개발</li>
+          <li>참여인원 : BackEnd 2명(본인) / FrontEnd 2명 / 총 4명 (전사 공유 플러그인 마켓플레이스)</li>
+          <li>담당업무 : 백엔드 스캐폴드 플러그인 신설 및 오너십, 개발 문서 색인 생성, 문서 검증 엔진 개발</li>
           <li>사용기술 : Claude Code Plugin(Skill/Hook), Node.js 22, GitLab CI</li>
         </ul>
 
@@ -179,7 +176,8 @@
         <p class="label label--solution">[주요 작업]</p>
         <ul class="bullets">
           <li><strong>백엔드 스캐폴드 플러그인 신설</strong> : Java 21, Spring Boot 4.1/3.5 두 기준선을 버전 SSOT(단일 표)로 관리하고, Boot 3 → 4 이행 차이(웹 스타터 개편, Jackson 3, 패키지 이동)를 템플릿 토큰으로 흡수. 신규 백엔드 프로젝트 초기 세팅을 대화형 질문 9개로 단축</li>
-          <li><strong>스캐폴드 템플릿의 신원 스푸핑 취약점 발견 및 차단</strong> : 게이트웨이 인증 필터가 클라이언트 발신 <code>X-User-Id</code> 헤더를 제거하지 않아 헤더 위조만으로 임의 사용자 인증 우회가 가능한 구조를 신뢰 경계 분석으로 발견. 헤더 강제 제거와 경로 매칭 세그먼트 경계화(<code>/auth</code> 규칙이 <code>/authx/**</code>를 통과시키던 결함 포함)로 수정, 템플릿 결함이라 파생 프로젝트 전체로 복제될 취약점을 확산 전에 차단</li>
+          <li><strong>스캐폴드 템플릿의 신원 스푸핑 취약점 발견 및 차단</strong> : Gateway 인증 필터가 클라이언트 발신 <code>X-User-Id</code> 헤더를 제거하지 않아 헤더 위조만으로 임의 사용자 인증 우회가 가능한 구조를 신뢰 경계 분석으로 발견. 헤더 강제 제거와 경로 매칭 세그먼트 경계화(<code>/auth</code> 규칙이 <code>/authx/**</code>를 통과시키던 결함 포함)로 수정, 템플릿 결함이라 파생 프로젝트 전체로 복제될 취약점을 확산 전에 차단</li>
+          <li><strong>기획 문서 색인용 개발 문서 생성</strong> : 기획 정본 전문을 매번 읽어야 하던 구조를 절 번호 기반 색인으로 대체해, 필요한 문항만 탐색하도록 전환. 탐색 성능 향상과 토큰 사용량 절감을 동시에 확보</li>
           <li><strong>기획 정본 ↔ 개발 문서 정합 검증 엔진 개발</strong> : 검사 10종과 회귀 테스트 97건. 수행하지 않은 검사와 통과한 검사를 구분해 보고하도록 하고, 보고만 하던 drift 검사에 <code>--strict</code>를 도입해 CI 차단 게이트로 승격</li>
         </ul>
       </div>
@@ -265,7 +263,7 @@
 
       <!-- 보험 상담 보장 분석 -->
       <div class="block">
-        <h3 class="project__title">보험 상담 보장 분석 <span class="period">2025. 04 – 2025. 05</span></h3>
+        <h3 class="project__title">보험 상담 보장 분석 자동화 <span class="period">2025. 04 – 2025. 05</span></h3>
         <ul class="meta">
           <li>참여인원 : BackEnd 1명 / FrontEnd 1명 / 기획 1명 / 디자인 1명 / 총 4명</li>
           <li>담당업무 : 보장 분석 스크래핑, 스크래핑 서버 구성, DB 설계</li>
@@ -299,7 +297,8 @@
 
         <p class="sub">AJAX 로딩 및 SPA 특성으로 인한 DOM 지연 렌더링 문제</p>
         <ul class="bullets">
-          <li>WebDriverWait 기반 명시적 대기와 예외 처리 로직 구성</li>
+          <li>렌더링 완료를 기다리기 위해 <code>Thread.sleep</code> 고정 대기를 사용하고 있어, 렌더링이 먼저 끝나도 남은 시간을 그대로 낭비하는 구조</li>
+          <li>WebDriverWait 기반 명시적 대기로 전환하여 요소가 준비되는 즉시 다음 단계로 진행하도록 변경, 예외 처리 로직 함께 구성</li>
           <li>재시도 로직을 구현하여 데이터 누락 없이 안정적인 수집 구조 구축</li>
         </ul>
 
@@ -311,7 +310,7 @@
           <li>추가 인프라 비용 없이 메모리 문제 해결</li>
         </ul>
 
-        <p class="etc"><strong>기타 수행 프로젝트</strong> : 보험금 Q&amp;A 서비스(형태소 분석 기반 키워드 랭킹, Redis 집계로 DB Write I/O 95% 감소), 지역별 대리인 관리 및 통계(단일 거대 쿼리 분리로 3,000ms → 800ms 개선)</p>
+        <p class="etc"><strong>기타 수행 프로젝트</strong> : 보험금 Q&amp;A 서비스(형태소 분석 기반 키워드 랭킹, Redis 집계로 DB Write I/O 95% 감소), 지역별 대리인 관리 및 통계(단일 거대 쿼리 분리로 3,000ms → 800ms 개선), 회원별 통계 처리, Java 기반 레거시 서비스 이전, PostgreSQL 쿼리 튜닝 및 장애 대응</p>
       </div>
 
     </div>
@@ -327,7 +326,7 @@
       <div class="block">
         <h3 class="project__title">보험 상품 데이터 수집 및 처리 파이프라인 구축 <span class="period">2020. 11 – 2023. 07</span></h3>
         <ul class="meta">
-          <li>참여인원 : BackEnd 5명</li>
+          <li>참여인원 : BackEnd 5명 / 총 5명</li>
           <li>담당업무 : 데이터 수집/처리 구조 설계, 공통 모듈화, 데이터 이력 관리, BackEnd 및 FrontEnd 개발</li>
           <li>사용기술 : Java, MyBatis, Spring Boot, MySQL, JavaScript, JSP, jQuery, AWS(EC2)</li>
         </ul>
@@ -434,15 +433,15 @@
       <dt>DevOps &amp; 버전 관리</dt>
       <dd>AWS(EC2, ECS, RDS, S3, MSK, Parameter Store), Docker, GitLab CI, Git</dd>
       <dt>API 계약 &amp; 테스트</dt>
-      <dd>OpenAPI(springdoc), Testcontainers, ArchUnit, JUnit 5</dd>
+      <dd>OpenAPI(springdoc), Testcontainers, JUnit 5</dd>
       <dt>Others</dt>
-      <dd>Selenium, Claude Code, Notion, Jira, Slack</dd>
+      <dd>Selenium(Firefox, Chrome), Claude Code, Notion, Jira, Slack</dd>
     </dl>
   </section>
 
   <div class="doc-end">
     <span>김용준 | Backend Engineer</span>
-    <span><a href="career-long.html">경력기술서 긴 버전 →</a></span>
+    <span><a href="career-long.html">경력기술서 Long ver. →</a></span>
   </div>
 
 </main>

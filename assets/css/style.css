@@ -279,8 +279,12 @@ a {
   margin-bottom: 16px;
 }
 
+/* 앞 회사의 마지막 프로젝트 다음에 오는 회사 = 회사가 바뀌는 지점.
+   첫 회사 위에는 선이 생기지 않는다. */
 .block + .company {
   margin-top: 34px;
+  padding-top: 22px;
+  border-top: 1px dashed var(--line);
 }
 
 /* 프로젝트 제목 */
@@ -324,6 +328,21 @@ ul.meta {
 
 ul.meta li {
   margin-bottom: 1px;
+}
+
+/* 이력서 주요 프로젝트의 메타 줄(참여인원·기술).
+   성과 항목과 같은 목록에 있지만 부가 정보이므로
+   마커를 없애고 본문보다 작고 연하게 낮춘다. */
+ul.bullets li.meta-line {
+  list-style: none;
+  margin-left: -20px; /* 마커 자리만큼 당겨 프로젝트명과 좌측 정렬 */
+  font-size: 13.5px;
+  color: var(--sub);
+}
+
+/* 메타가 끝나고 시작되는 첫 성과 항목은 살짝 띄워 시각적으로 분리 */
+ul.bullets li.meta-line + li:not(.meta-line) {
+  margin-top: 5px;
 }
 
 /* 대괄호 섹션 라벨 */
@@ -697,7 +716,7 @@ code {
 
   /* 여백 — 화면 기준 값을 그대로 쓰면 인쇄에서 공백이 과해지고
      마지막 한두 줄이 새 페이지로 밀려난다 */
-  .block + .company { margin-top: 20px; }
+  .block + .company { margin-top: 20px; padding-top: 14px; }
   .block { margin-bottom: 16px; }
   .section { margin-top: 22px; }
   .section + .section { padding-top: 16px; }
