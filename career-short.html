@@ -48,7 +48,7 @@
         <ul class="meta">
           <li>참여인원 : BackEnd 1명(본인) / FrontEnd 1명 / 기획 1명 / 총 3명</li>
           <li>담당업무 : 백엔드 아키텍처 설계 및 구현 전담, OpenAPI 계약 파이프라인 구축, DB 설계, CI/CD 구축</li>
-          <li>사용기술 : Java, Spring Boot, Spring Cloud Gateway, MyBatis, PostgreSQL, Redis, AWS Parameter Store, Docker, GitLab CI, Claude Code</li>
+          <li>사용기술 : Java, Spring Boot, Spring Cloud Gateway, MyBatis, PostgreSQL, Redis, RabbitMQ, AWS Parameter Store, Docker, GitLab CI, Claude Code</li>
         </ul>
 
         <p class="label label--overview">[개요]</p>
@@ -81,11 +81,6 @@
               <li>경로 문자열은 리팩토링할 때마다 바뀌어 대조 기준으로 쓸 수 없다고 판단하여 값이 변하지 않는 <code>operationId</code>를 기준 키로 삼아 기획 문서와 코드의 API를 CI에서 전수 대조</li>
             </ul>
           </li>
-        </ul>
-
-        <p class="sub">헤더 위조로 다른 사용자가 되는 문제</p>
-        <ul class="bullets">
-          <li>Gateway에서 클라이언트가 보낸 신원 헤더(<code>X-User-*</code>)를 항상 제거 후 재부여하여 신원 스푸핑 차단</li>
         </ul>
 
         <p class="sub">API 버저닝 규약 설계</p>
@@ -308,7 +303,7 @@
           <li>추가 인프라 비용 없이 메모리 문제 해결</li>
         </ul>
 
-        <p class="etc"><strong>기타 수행 프로젝트</strong> : 보험금 Q&amp;A 서비스(형태소 분석 기반 키워드 랭킹, Redis 집계로 DB Write I/O 95% 감소), 지역별 대리인 관리 및 통계(단일 거대 쿼리 분리로 3,000ms → 800ms 개선), 회원별 통계 처리, Java 기반 레거시 서비스 이전, PostgreSQL 쿼리 튜닝 및 장애 대응</p>
+        <p class="etc"><strong>기타 수행 프로젝트</strong> : 지역별 대리인 관리 및 통계(단일 거대 쿼리 분리로 3,000ms → 800ms 개선), 회원별 통계 처리, Java 기반 레거시 서비스 이전, PostgreSQL 쿼리 튜닝 및 장애 대응</p>
       </div>
 
     </div>
@@ -431,7 +426,7 @@
       <dt>언어 &amp; 프레임워크</dt>
       <dd>Java, Kotlin, Spring Boot, Spring Cloud Gateway, MyBatis, Exposed, Jooq, JPA</dd>
       <dt>DB &amp; 메시징 &amp; 캐시</dt>
-      <dd>PostgreSQL, MySQL, Kafka, Redis</dd>
+      <dd>PostgreSQL, MySQL, Kafka, RabbitMQ, Redis</dd>
       <dt>DevOps &amp; 버전 관리</dt>
       <dd>AWS(EC2, ECS, RDS, S3, MSK, Parameter Store), Docker, GitLab CI, Git</dd>
       <dt>Others</dt>
